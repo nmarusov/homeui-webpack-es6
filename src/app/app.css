@@ -1,0 +1,722 @@
+/*!
+ * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin-top: 50px;
+    background-color: #222;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+    min-height: 370px;
+    position: relative;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #222;
+        bottom:0;
+        overflow-x:hidden;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #000 !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+
+/* connection status */
+
+.connection-status{
+	float: right;
+	padding-right: 20px;
+    display: none;
+}
+@media(min-width:360px) {
+	.connection-status{
+	  display: inherit;
+	}
+}
+
+@media(min-width:768px) {
+	.navbar-header {
+		float: none;
+	}
+
+	.connection-status{
+	  padding-right: 40px;
+	}
+}
+
+
+
+
+/* Flot Chart Containers */
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Colored Panels */
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green a {
+    color: #5cb85c;
+}
+
+.panel-green a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+
+/* Devices List */
+
+@media(min-width:768px) {
+  .multicol-list{
+    position: relative;
+    -webkit-column-width: 390px;
+    -webkit-column-gap: 0;
+    -moz-column-width: 390px;
+    -moz-column-gap: 0;
+    column-width: 390px;
+    column-gap: 0;
+  }
+}
+
+.multicol-list ul li {
+  display: inline-block;
+  width: 380px;
+}
+
+@media(max-width: 390px) {
+  .multicol-list ul li {
+    display: inline-block;
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+/* Form Validation -- disabled for now
+
+.ng-invalid {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty{
+  border-color: #78FA89;
+}
+-->
+
+/* NavBar Items */
+
+.navbar-nav .active > a,
+.navbar-nav a.active{
+  color: #fff !important;
+  background-color: #080808 !important;
+}
+
+/* Glyphicons */
+
+.white {
+  color: #fff;
+}
+.black {
+  color: #000;
+}
+.medium{
+  font-size: 18px;
+}
+
+/* List menu */
+
+li.list-menu{
+  width: 225px;
+  line-height: 50px;
+}
+
+li.list-menu li{
+  line-height: 20px;
+}
+
+li.list-menu > a{
+  display: inline;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  right:25px;
+  opacity: 0.5;
+}
+
+.widget-caption-button {
+	padding-left: 10px;
+}
+
+.dashboard-caption-button {
+	padding-left: 10px;
+}
+
+
+
+
+
+.btn-primary {
+	background-color: #337ab7;
+	color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	background-color: #5393c8;
+}
+
+.btn-primary:active, .btn-primary.active {
+	background-color: #094b83;
+	box-shadow: none;
+}
+
+.script-menu .error {
+  color: #f00;
+}
+
+.script-menu .error .glyphicon-alert {
+  font-size: 12px;
+}
+
+.script-editor {
+  margin-right: 30px;
+  border-right: 1px solid #eee;
+}
+
+.script-editor .CodeMirror {
+  height: auto;
+  margin-top: 10px;
+}
+
+.script-editor .CodeMirror .script-error-line {
+  background-color: #f00;
+}
+
+button.show-console {
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  font-size: 18px;
+  padding: 6px 10px;
+  opacity: 0.3;
+}
+
+.show-console:hover {
+  opacity: 1;
+}
+
+button.show-console span {
+  vertical-align: -1px;
+}
+
+.console {
+  position: fixed;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 220px;
+  z-index: 100000;
+}
+
+.console button.close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 16px;
+}
+
+.show-console #page-wrapper {
+  padding-bottom: 180px;
+}
+
+.console .console-view {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 2px;
+  bottom: 4px;
+}
+
+.console .console-view > label {
+  font-weight: normal;
+  float: right;
+  margin-right: 30px;
+}
+
+.console .console-view > label > input {
+  vertical-align: -1px;
+}
+
+.console .console-view .console-messages {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.console .console-view .console-message-ts {
+  display: inline-block;
+  width: 145px;
+  vertical-align: middle;
+}
+
+.console-message-level-error {
+  font-weight: bold;
+  color: #b00;
+}
+
+.console-message-level-warning {
+  font-weight: bold;
+  color: #c90;
+}
+
+.console-message-level-debug {
+  color: #090;
+}
+
+.console-message-level-info {
+  color: #009;
+}
+
+.spinner {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }
+
+.alarm {
+  border: 1px solid #900;
+  padding: 4px 10px;
+  border-radius: 10px;
+  color: #900;
+  opacity: 0.2;
+}
+
+.alarm-active {
+  background-color: #900;
+  color: #fff;
+  opacity: 1;
+}
+
+.color-indicator {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.display-cell .value,
+.display-cell .units,
+.display-cell input {
+  font-family: monospace;
+}
+
+.display-cell-bin .display-cell:not(.cell-type-range) {
+  display: flex;
+  align-items: center;
+}
+
+.display-cell-bin .display-cell:not(.cell-type-range) h4 {
+  flex-grow: 1;
+}
+
+.display-cell .cell-range .value-wrapper {
+  display: block;
+  text-align: center;
+  border-bottom: 1px dotted #ccc;
+  width: 80%;
+  margin: 0 auto 4px auto;
+}
+
+.display-cell  button.cell-button {
+  margin: 4px 0;
+}
+
+.display-cell input.cell-text {
+  width: 120px;
+}
+
+.display-cell .cell-value input {
+  width: 120px;
+}
+
+.cell-error {
+  color: red;
+}
+
+.widget .panel-heading {
+  display: flex;
+}
+
+.widget-caption-button {
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.widget:hover .widget-caption-button {
+  visibility: visible;
+}
+
+.widget .panel-heading .widget-name,
+.widget .panel-heading .editable-text {
+  flex-grow: 1;
+}
+
+.widget .panel-heading .editable-wrap {
+  display: block;
+}
+
+.widget .panel-heading input[type=text] {
+  width: 100%;
+  color: #555;
+  border: none;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.widget .panel-heading input[type=text]:focus {
+  outline: none;
+}
+
+.widget .add-cell label select {
+  display: inline-block;
+  width: 140px;
+}
+
+.widget .btn-form {
+  margin-top: 10px;
+}
+
+.widget .ui-select-container {
+  max-width: 100%;
+}
+
+.widget.compact .display-cell.cell-type-range {
+  margin-top: 4px;
+}
+
+.widget.compact .display-cell:not(.cell-type-range) {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.idx-col {
+  width: 30px;
+}
+
+.name-col input[type=text] {
+  display: inline-block;
+  width: 400px;
+}
+
+.id-col {
+  width: 100px;
+}
+
+.button-col {
+  width: 200px;
+}
+
+.widgets-table .name-col {
+  min-width: 200px;
+}
+
+.widgets-table .description-col {
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.widgets-table ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.widgets-table .cell-name-col {
+  min-width: 200px;
+}
+
+.widgets-table h4.cell-title .name {
+  font-size: 14px;
+}
+
+.widgets-table h4.cell-title .id {
+  font-size: 10px;
+  display: block;
+  margin-top: 2px;
+}
+
+.widgets-table .dashboards-col {
+  width: 200px
+}
+
+.widgets-table .cell-type-col {
+  width: 100px;
+}
+
+.widgets-table .cell-value-col {
+  width: 200px;
+}
+
+.widgets-table .cell-history-col {
+  width: 21px;
+}
+
+.widgets-table .cell-history-col {
+  width: 21px;
+}
+
+.widgets-table .button-col button {
+  color: #337ab7;
+  margin: 0;
+  padding: 2px;
+}
+
+.widgets-table .button-col button[name=delete] {
+  color: #c00;
+}
+
+.widgets-table td .widget {
+  margin: 10px auto;
+  max-width: 378px;
+}
+
+.widgets-table .button-col {
+  width: 60px;
+}
+
+.editable-error {
+  color: red;
+}
+
+.editable-wrap.editable-elastic-textarea {
+  display: block;
+  margin-top: 10px;
+}
+
+.table.webui-table td,
+.table.webui-table th {
+  vertical-align: middle;
+}

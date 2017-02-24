@@ -1,0 +1,11 @@
+<div class="alert alert-success" role="alert" ng-cloak>
+  <strong>Changes</strong> successfully saved.
+</div>
+
+<div class="alert alert-danger" role="alert" ng-cloak>
+  <button type="button" class="close" ng-click="visible = false;"
+          aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <!-- <span class="sr-only">Error:</span> -->
+  <span ng-bind-html="messageHtml"></span>
+</div>
